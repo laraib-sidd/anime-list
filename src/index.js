@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Card from './Card'
+// import App from './App';
+import {anime} from './anime'
+import 'tachyons';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Card name={anime[0].title} score={anime[0].score} url={anime[0].url}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
