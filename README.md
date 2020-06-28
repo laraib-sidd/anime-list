@@ -14,8 +14,14 @@ A React app to show my Anime list.
 First Clone this repository:
 * `git clone https://github.com/laraib-sidd/anime-list.git`
 
+## Setting up your own project:
+* Create a New Github repository.
+* Clone Your repository using `git clone {Your github Url}`
+* Copy all the data from my the `anime-list` folder to your Git Folder.
+* After copying the data you can Delete the `anime-list` folder.
+
 ## Now Set-up the enviroment
-* `cd anime-list`
+* `cd {to the git repository location}`
 * `npm install`
 * `pip3 install -r requirments.text`
 
@@ -26,16 +32,32 @@ First Clone this repository:
 * `npm start`
 
 ## Get your own list from MyAnimeList Website:
-* Go to your list page.
+* Go to your Myanimelist page.
 * Click on export.
 * Click on Save.
 * Extract the file.
 * Rename it as `anime.xml`.
 * Copy the file into `anime-list\src\Containers\`
 
-## Running your own website:
-* Run `python3 filter.py`.
-* Run `npm start`.
+## Getting your data ready:
+* Go to the project directory.
+* Run `npm run data`
 
-## If you have Mananged till here, your website is running on localhost.
+## If you have Mananged till here, your website can run on localhost.
+* Run `npm start`
+
+# Deployment
+
+## Using Github Pages:
+* Run `npm run deploy`
+* Now go to your github page you can find the link to your anime list website there.
+
+## Using Netlify
+* Run `npm run build`
+* Now an optomized version of your website is formed in the `build` folder
+* Login to your Netlify  Account.
+* Go to site section.
+* Drag and drop the build folder.
+* Click on publish.
+* You Website is Published.
 
