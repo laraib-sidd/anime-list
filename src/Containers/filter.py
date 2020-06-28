@@ -44,10 +44,6 @@ def main():
     js = create(js)
     os.remove('anime.xml')
     os.remove('anime.json')
-    try:
-        os.remove('anime.js')
-    except:
-        pass
     with open('anime.js', 'w') as fout:
         fout.write(f'export const anime =\n{json.dumps(js, sort_keys=True, indent=4)}')
 
