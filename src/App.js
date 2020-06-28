@@ -3,6 +3,7 @@ import CardList from './CardList'
 import {anime} from './anime'
 import SearchBox from './SearchBox'
 import './App.css'
+import Scroll from './Scroll'
 
 export default class App extends Component {
     constructor(){
@@ -24,7 +25,9 @@ export default class App extends Component {
             <div className="tc">
             <h1 className="f1">My Anime List</h1>
             <SearchBox searchChange={this.onSearchChange}/>
-            <CardList anime={filteranime} />
+            <Scroll>
+                <CardList anime={filteranime} />
+            </Scroll>
             </div>
         )
     }
