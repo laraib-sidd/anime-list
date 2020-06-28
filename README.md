@@ -5,6 +5,11 @@ A React app to show my Anime list.
 * `python3`
 * `node-js`
 
+## Installing Requirments if miising:
+* `apt install python3-pip3`
+* `apt install nodejs`
+* `apt install npm`
+
 ## If you wish to create yours follow Bellow:
 First Clone this repository:
 * `git clone https://github.com/laraib-sidd/anime-list.git`
