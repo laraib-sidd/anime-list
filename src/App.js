@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import CardList from './CardList'
 import {anime} from './anime'
 import SearchBox from './SearchBox'
+import './App.css'
 
 export default class App extends Component {
     constructor(){
@@ -21,7 +22,7 @@ export default class App extends Component {
     )
         return (
             <div className="tc">
-            <h1>My Anime List</h1>
+            <h1 className="f1">My Anime List</h1>
             <SearchBox searchChange={this.onSearchChange}/>
             <CardList anime={filteranime} />
             </div>
