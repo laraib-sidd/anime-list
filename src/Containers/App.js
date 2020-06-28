@@ -3,6 +3,7 @@ import CardList from '../Components/CardList'
 import {anime} from './anime'
 import SearchBox from '../Components/SearchBox'
 import './App.css'
+import ErrorBoundary from '../Components/ErrorBoundary'
 import Scroll from '../Components/Scroll'
 
 export default class App extends Component {
@@ -26,7 +27,9 @@ export default class App extends Component {
             <h1 className="f1">My Anime List</h1>
             <SearchBox searchChange={this.onSearchChange}/>
             <Scroll>
-                <CardList anime={filteranime} />
+                <ErrorBoundary>
+                    <CardList anime={filteranime} />
+                </ErrorBoundary>
             </Scroll>
             </div>
         )
