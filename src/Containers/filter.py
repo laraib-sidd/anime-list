@@ -29,6 +29,7 @@ def create(json, li=[]):
 
 
 def main():
+    print(os.chdir('src/Containers/'))
     with open("anime.xml") as xml_file:
         data_dict = xmltodict.parse(xml_file.read())
 
@@ -43,6 +44,10 @@ def main():
     js = create(js)
     os.remove('anime.xml')
     os.remove('anime.json')
+    try:
+        os.remove('anime.js')
+    except:
+        pass
     with open('anime.js', 'w') as fout:
         fout.write(f'export const anime =\n{json.dumps(js, sort_keys=True, indent=4)}')
 
