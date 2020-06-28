@@ -8,10 +8,12 @@ const CardList = ({anime}) => {
         {
         anime.map(anime => {
             return(
-                <Card key={anime.title}
-                name={anime.title}
+                <Card key={anime.id}
+                name={anime.name}
                 score={anime.score}
-                url={anime.url} />
+                img={anime.image}
+                url={anime.url}
+                />
                   )
                             }
                 )

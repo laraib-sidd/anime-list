@@ -16,7 +16,7 @@ export default class App extends Component {
     }
     render() {
         const filteranime = this.state.anime.filter(anim => {
-            return anim.title.toLowerCase().includes(this.state.Searchfield.toLowerCase())
+            return anim.name.toLowerCase().includes(this.state.Searchfield.toLowerCase())
         }
     )
         return (

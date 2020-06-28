@@ -1,0 +1,7 @@
+@import url(https://allfont.net/allfont.css?fonts=edo);
+
+h1{
+    font-family: 'Edo', arial;
+    font-size: 90px ;
+    text-shadow: 4px 4px 4px #aaa;
+}
