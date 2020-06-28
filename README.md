@@ -18,6 +18,7 @@ First Clone this repository:
 * `cd anime-list`
 * `npm install`
 * `pip3 install -r requirments.text`
+
 ### If you run into any errors with `npm`:
 * `npm audit fix`
 
