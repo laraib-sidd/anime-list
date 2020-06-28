@@ -61,3 +61,5 @@ First Clone this repository:
 * Click on publish.
 * You Website is Published.
 
+## Raise a Issue you have Any Doubts.
+### Feel free to make pull requests.
