@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import CardList from './CardList'
+import CardList from '../Components/CardList'
 import {anime} from './anime'
-import SearchBox from './SearchBox'
+import SearchBox from '../Components/SearchBox'
 import './App.css'
-import Scroll from './Scroll'
+import Scroll from '../Components/Scroll'
 
 export default class App extends Component {
     constructor(){
