@@ -17,9 +17,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "data": "python3 src/Containers/filter.py",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build data"
   },
   "eslintConfig": {
     "extends": "react-app"
