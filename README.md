@@ -37,7 +37,7 @@ First Clone this repository:
 * Click on Save.
 * Extract the file.
 * Rename it as `anime.xml`.
-* Copy the file into `anime-list\src\Containers\`
+* Copy the file into `{Your Repository}\src\Containers\`
 
 ## Getting your data ready:
 * Go to the project directory.
