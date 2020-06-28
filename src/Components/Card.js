@@ -2,7 +2,7 @@ import React from 'react';
 
 const Card = ({name,score,url,img}) => {
     return(
-        <div className="bg-light-yellow dib br3 pa3 ma2 grow bw1 shadow-5 tc">
+        <div className="bg-light-yellow dib br3 pa3 ma2 grow bw1 shadow-5 tc" style={{backgroundColor: '#E2C2C6'}}>
             <a href ={url} target="_blank" rel="noopener noreferrer" style={{textDecoration:0}}>
             <img alt="anime-logo" src={img} />
             <div>
