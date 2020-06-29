@@ -6,7 +6,7 @@ const Card = ({name,score,url,img}) => {
             <a href ={url} target="_blank" rel="noopener noreferrer" style={{textDecoration:0}}>
             <img alt="anime-logo" src={img} />
             <div>
-                <h2 className="black">{name}</h2>
+                <h3 className="black">{name}</h3>
                 <p className="b green">Score : {score}</p>
             </div>
             </a>
