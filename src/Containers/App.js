@@ -15,6 +15,7 @@ const mapStatetToProps = state => {
         searchField : state.searchRobots.searchField
     }
 }
+
 class App extends Component {
     constructor(){
         super();
