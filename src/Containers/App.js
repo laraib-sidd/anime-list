@@ -1,12 +1,14 @@
-import React, { Component } from 'react'
-import CardList from '../Components/CardList'
-import {anime} from './anime'
-import SearchBox from '../Components/SearchBox'
-import './App.css'
-import ErrorBoundary from '../Components/ErrorBoundary'
-import Scroll from '../Components/Scroll'
+import React, { Component } from 'react';
+import {connect} from 'react-redux';
+import CardList from '../Components/CardList';
+import {anime} from './anime';
+import SearchBox from '../Components/SearchBox';
+import './App.css';
+import ErrorBoundary from '../Components/ErrorBoundary';
+import Scroll from '../Components/Scroll';
 
-export default class App extends Component {
+import {setSearchField} from '../actions';
+class App extends Component {
     constructor(){
         super();
         this.state = {
@@ -35,4 +37,7 @@ export default class App extends Component {
         )
     }
 }
+
+export default connect()(App);
+
 
