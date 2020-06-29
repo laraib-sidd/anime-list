@@ -8,6 +8,13 @@ import ErrorBoundary from '../Components/ErrorBoundary';
 import Scroll from '../Components/Scroll';
 
 import {setSearchField} from '../actions';
+
+
+const mapStatetToProps = state => {
+    return{
+        searchField : state.searchRobots.searchField
+    }
+}
 class App extends Component {
     constructor(){
         super();
@@ -38,6 +45,4 @@ class App extends Component {
     }
 }
 
-export default connect()(App);
-
-
+export default connect(mapStatetToProps, mapDispatchToProps)(App);
