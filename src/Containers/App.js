@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import CardList from '../Components/CardList';
 import {anime} from './anime';
@@ -9,47 +9,41 @@ import Scroll from '../Components/Scroll';
 
 import {setSearchField} from '../actions';
 
-
 const mapStatetToProps = state => {
-    return{
-        searchField : state.searchField
-    }
+    return {searchField: state.searchField}
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onSearchChange : (event) => dispatch(setSearchField(event.target.value))
+        onSearchChange: (event) => dispatch(setSearchField(event.target.value))
     }
 }
 
 class App extends Component {
-    constructor(){
+    constructor() {
         super();
         this.state = {
-            anime : anime
+            anime: anime
         }
     }
 
     render() {
         const {anime} = this.state;
-        const {searchField,onSearchChange} = this.props;
+        const {searchField, onSearchChange} = this.props;
         const filteranime = anime.filter(anim => {
             return anim.name.toLowerCase().includes(searchField.toLowerCase())
-        }
-    )
-        return (
-            <div className="tc">
-                <h1 className="f1">
-                    My Anime List
-                </h1>
-                <SearchBox searchChange={onSearchChange}/>
-                <Scroll>
-                    <ErrorBoundary>
-                        <CardList anime={filteranime} />
-                    </ErrorBoundary>
-                </Scroll>
-            </div>
-        )
+        })
+        return (<div className="tc">
+            <h1 className="f1">
+                My Anime List
+            </h1>
+            <SearchBox searchChange={onSearchChange}/>
+            <Scroll>
+                <ErrorBoundary>
+                    <CardList anime={filteranime}/>
+                </ErrorBoundary>
+            </Scroll>
+        </div>)
     }
 }
 
