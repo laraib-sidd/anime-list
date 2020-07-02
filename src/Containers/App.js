@@ -12,40 +12,42 @@ import {setSearchField} from '../actions';
 
 const mapStatetToProps = state => {
     return{
-        searchField : state.searchRobots.searchField
+        searchField : state.searchField
     }
 }
 
-const mapDispatchToProps = state => {
-    return{
-
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onSearchChange : (event) => dispatch(setSearchField(event.target.value))
     }
 }
+
 class App extends Component {
     constructor(){
         super();
         this.state = {
-            anime : anime,
-            Searchfield : ''
+            anime : anime
         }
     }
-    onSearchChange = (event) => {
-        this.setState({Searchfield:event.target.value})
-    }
+
     render() {
-        const filteranime = this.state.anime.filter(anim => {
-            return anim.name.toLowerCase().includes(this.state.Searchfield.toLowerCase())
+        const {anime} = this.state;
+        const {searchField,onSearchChange} = this.props;
+        const filteranime = anime.filter(anim => {
+            return anim.name.toLowerCase().includes(searchField.toLowerCase())
         }
     )
         return (
             <div className="tc">
-            <h1 className="f1">My Anime List</h1>
-            <SearchBox searchChange={this.onSearchChange}/>
-            <Scroll>
-                <ErrorBoundary>
-                    <CardList anime={filteranime} />
-                </ErrorBoundary>
-            </Scroll>
+                <h1 className="f1">
+                    My Anime List
+                </h1>
+                <SearchBox searchChange={onSearchChange}/>
+                <Scroll>
+                    <ErrorBoundary>
+                        <CardList anime={filteranime} />
+                    </ErrorBoundary>
+                </Scroll>
             </div>
         )
     }
